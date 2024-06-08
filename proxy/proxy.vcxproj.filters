@@ -6,7 +6,6 @@
     <ClInclude Include="..\common\helper.h" />
     <ClInclude Include="..\common\network.h" />
     <ClInclude Include="..\common\common.h" />
-    <ClInclude Include="..\common\common_proxy.h" />
     <ClInclude Include="odrive_control.h" />
     <ClInclude Include="..\common\time_helper.h" />
     <ClInclude Include="..\common\odrive\endpoint.h">

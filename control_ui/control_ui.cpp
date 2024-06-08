@@ -983,7 +983,7 @@ int main(int argc, char** argv)
 
 	glfwWindowHint(GLFW_VISIBLE, 0);
 	glfwWindowHint(GLFW_MAXIMIZED, 1);
-    window = glfwCreateWindow(1280, 720, "BalanceBot Controller", nullptr, nullptr);
+    window = glfwCreateWindow(1280, 720, "ODrive Control UI", nullptr, nullptr);
     glfwMakeContextCurrent(window);
     glfwSwapInterval(0); // Disable vsync
 

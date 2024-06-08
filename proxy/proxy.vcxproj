@@ -81,7 +81,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="..\common\common.h" />
-    <ClInclude Include="..\common\common_proxy.h" />
     <ClInclude Include="..\common\helper.h" />
     <ClInclude Include="..\common\network.h" />
     <ClInclude Include="..\common\odrive\endpoint.h" />
