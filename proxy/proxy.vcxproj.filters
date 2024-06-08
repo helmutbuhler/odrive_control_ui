@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="main.h" />
+    <ClInclude Include="server.h" />
+    <ClInclude Include="..\common\helper.h" />
+    <ClInclude Include="..\common\network.h" />
+    <ClInclude Include="..\common\common.h" />
+    <ClInclude Include="..\common\common_proxy.h" />
+    <ClInclude Include="odrive_control.h" />
+    <ClInclude Include="..\common\time_helper.h" />
+    <ClInclude Include="..\common\odrive\endpoint.h">
+      <Filter>odrive</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\odrive\json.hpp">
+      <Filter>odrive</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\odrive\ODrive.h">
+      <Filter>odrive</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\odrive\odrive_helper.h">
+      <Filter>odrive</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="server.cpp" />
+    <ClCompile Include="..\common\helper.cpp" />
+    <ClCompile Include="..\common\network.cpp" />
+    <ClCompile Include="odrive_control.cpp" />
+    <ClCompile Include="..\common\time_helper.cpp" />
+    <ClCompile Include="..\common\odrive\ODrive.cpp">
+      <Filter>odrive</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\odrive\endpoint.cpp">
+      <Filter>odrive</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="odrive">
+      <UniqueIdentifier>{a63d9dbb-1e73-4bab-8455-60a173dec31c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
