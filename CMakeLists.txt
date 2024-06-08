@@ -40,7 +40,6 @@ add_executable(proxy
 	common/odrive/ODrive.cpp
 	common/odrive/endpoint.cpp
 
-	common/helper.cpp
 	common/network.cpp
 	common/time_helper.cpp
 

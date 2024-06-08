@@ -24,7 +24,6 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="server.cpp" />
-    <ClCompile Include="..\common\helper.cpp" />
     <ClCompile Include="..\common\network.cpp" />
     <ClCompile Include="odrive_control.cpp" />
     <ClCompile Include="..\common\time_helper.cpp" />

@@ -17,3 +17,4 @@
 /Release/*.pdb
 /Release/*.exe
 /proxy/x64
+/images/*.pdn

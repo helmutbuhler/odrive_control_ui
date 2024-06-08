@@ -93,7 +93,6 @@
     <ClInclude Include="server.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\common\helper.cpp" />
     <ClCompile Include="..\common\network.cpp" />
     <ClCompile Include="..\common\odrive\endpoint.cpp" />
     <ClCompile Include="..\common\odrive\ODrive.cpp" />
