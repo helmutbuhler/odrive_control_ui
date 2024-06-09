@@ -1,4 +1,6 @@
-﻿#ifndef COMPILING_CONTROL_UI
+﻿// UI application that connects to the proxy and can display all kinds of plots and contols the ODrive
+
+#ifndef COMPILING_CONTROL_UI
 #error COMPILING_CONTROL_UI must be defined for the control_ui project
 #endif
 

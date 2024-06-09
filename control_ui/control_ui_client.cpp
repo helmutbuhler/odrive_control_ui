@@ -1,3 +1,4 @@
+// This handles network communication with the proxy
 
 #include "control_ui_client.h"
 #include "control_ui.h"
