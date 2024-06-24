@@ -2,8 +2,6 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="control_ui_client.cpp" />
-    <ClCompile Include="..\control_ui\plot.cpp" />
-    <ClCompile Include="control_ui_proxy.cpp" />
     <ClCompile Include="..\3rdparty\imgui\imgui.cpp">
       <Filter>imgui</Filter>
     </ClCompile>
@@ -36,11 +34,12 @@
     </ClCompile>
     <ClCompile Include="..\common\network.cpp" />
     <ClCompile Include="..\common\time_helper.cpp" />
+    <ClCompile Include="plot.cpp" />
+    <ClCompile Include="control_ui.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="control_ui_client.h" />
     <ClInclude Include="plot.h" />
-    <ClInclude Include="control_ui_proxy.h" />
     <ClInclude Include="..\3rdparty\imgui\imconfig.h">
       <Filter>imgui</Filter>
     </ClInclude>
@@ -73,6 +72,7 @@
     </ClInclude>
     <ClInclude Include="..\common\network.h" />
     <ClInclude Include="..\common\time_helper.h" />
+    <ClInclude Include="control_ui.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="imgui">
