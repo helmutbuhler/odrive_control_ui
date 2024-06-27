@@ -9,10 +9,6 @@
 #include <cstring>
 
 
-const char* host_address = "localhost";
-//const char* host_address = "raspberrypi";
-//const char* host_address = "192.168.137.180";
-
 static SOCKET s = INVALID_SOCKET;
 int cd_counter = -1;
 
@@ -57,12 +53,6 @@ void client_connect(const char* address, u16 port)
 
 bool client_update()
 {
-	// start connecting when not connected
-	/*if (s == INVALID_SOCKET && !connecting)
-	{
-		connecting = net_connect(host_address, port, true, true);
-	}*/
-
 	if (connecting && net_connect_is_done(connecting, &s))
 	{
 		net_connect_close(connecting);
