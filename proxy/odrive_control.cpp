@@ -152,7 +152,7 @@ bool odrive_control_init(const Params& params)
 	for (int a = 0; a < monitor_axes; a++)
 	{
 		Endpoint& axis = get_axis(a);
-		axis("config")("watchdog_timeout").set(0.5f);
+		axis("config")("watchdog_timeout").set(1.0f);
 		axis("watchdog_feed").call();
 		axis("config")("enable_watchdog").set(true);
 	}

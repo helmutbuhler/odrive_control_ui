@@ -156,6 +156,8 @@ void on_new_monitor_data(MonitorData& md)
 		for (int i = md.oscilloscope_start; i < md.oscilloscope_end; i++)
 		{
 			// #osci
+			// Map data from ODrive oscilloscope to data in history.
+			// This must match the variables captured in the firmware in ODrive/Firmware/MotorControl/motor.cpp.
 			float value = md.oscilloscope_transmitting[i-md.oscilloscope_start];
 			const int oscilloscope_values_per_step = 8;
 			int h = oscilloscope_history_start+i/oscilloscope_values_per_step;
@@ -681,7 +683,7 @@ void draw_ui_sidebar(float monitor_height, float sidebar_width)
 	if (ImGui::CollapsingHeader("Oscilloscope"))
 	{
 		MonitorData& md = get_last_monitor_data();
-		ImGui::TextWrapped("Right now, the oscilloscope is hardcoded to record position, velocity and current of both axes upon triggering. (It would be easy to make this configurable, but it's not done yet).");
+		ImGui::TextWrapped("Right now, the oscilloscope is hardcoded to record position, velocity, current and velocity target of both axes upon triggering. (It would be easy to make this configurable, but it's not done yet). Each datapoint is stored internally in 16-bit floats, so the position data might become inaccurate when it deviates too much from zero.");
 		ImGui::TextWrapped("After triggering, the oscilloscope will record those values in 8000Hz until the RAM of ODrive is full. Then it will transmit that data (which will take a while) and the data will appear in the plots.");
 
 		bool disabled = true;
@@ -723,6 +725,7 @@ void draw_ui_sidebar(float monitor_height, float sidebar_width)
 		default: assert(0);
 		}
 		PLOT_HISTORY("oscilloscope_state", (float)md.oscilloscope_state);
+		if (ImGui::IsItemHovered()) ImGui::SetTooltip("The oscilloscope variables are displayed in 8kHz where oscilloscope_state is equal to 1");
 	}
 	ImGui::NewLine();
 
@@ -791,7 +794,7 @@ void draw_ui_main_1(float monitor_height, float sidebar_width)
 	{
 		ImVec2 draw_robot_ui_pos = ImGui::GetCursorScreenPos();
 		draw_joint_state(draw_robot_ui_pos.x+80*dpi_scaling, draw_robot_ui_pos.y+80*dpi_scaling);
-		ImGui::Dummy(ImVec2(0, 200*dpi_scaling));
+		ImGui::Dummy(ImVec2(0, 170*dpi_scaling));
 		ImGui::TreePop();
 	}
 	ImGui::End();
