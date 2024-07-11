@@ -17,7 +17,7 @@ This is a native application that visualizes ODrive data
  - Displays oscilloscope data (When using custom firmware)
  - Indirect communication with ODrive. The proxy application polls the ODrive data and this one connects via TCP and visualizes it. This way no direct USB/UART connection between ODrive and Control UI is required.
  - It is easily extended to plot other values retrieved by the proxy application. Or computed ones. This is useful when you have other sensors or want to debug control algorithms.
- - Plots are quite scalable: This repo (todo) shows how to extend this application to monitor about 300 variables and it's still very fast and the UI is not overwhelming,
+ - Plots are quite scalable: This [repo](https://github.com/helmutbuhler/milana_robot) shows how to extend this application to monitor about 300 variables and it's still very fast and the UI is not overwhelming,
  - Easy to add graphical visualizations of the joint states or video streams and keep it all synchronized.
  - Also should work with ODrive S1 and Pro, but I havn't tried it yet.
  - No JS;)
@@ -26,7 +26,7 @@ This is a native application that visualizes ODrive data
 This is a helper application that directly connects to the ODrive (with the helper library) and basically polls all kinds of values with a frequency of 100Hz. It also opens a server from which it can receive commands.
 This is useful for example when you have a robot with a small single-board computer that is connected to the ODrive(s). In that scenario you can start the proxy on the robot and start the Control UI on your PC and connect it.
 
-Right now the proxy works with either the official ODrive firmware 0.5.6 or with the unofficial version here(todo). But if you want to use another version or build your own, it should be easy to adapt the code.
+Right now the proxy works with either the official ODrive firmware 0.5.6 or with the unofficial version [here](https://github.com/helmutbuhler/odrive_milana). But if you want to use another version or build your own, it should be easy to adapt the code.
 
 ## C++ Library to communicate with ODrive via USB/UART
 A small library that handles USB/UART communications with an ODrive motor controller.
