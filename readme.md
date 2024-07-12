@@ -17,13 +17,15 @@ This is a native application that visualizes ODrive data
  - Polls any data and displays it in a graphical user interface
  - Plotting over long time periods
  - Sets any ODrive values via UI
- - Displays oscilloscope data (When using [custom firmware](https://github.com/helmutbuhler/odrive_milana))
+ - Displays oscilloscope data (when using [custom firmware](https://github.com/helmutbuhler/odrive_milana))
  - Indirect communication with ODrive. The proxy application polls the ODrive data and this one connects via TCP and visualizes it. This way no direct USB/UART connection between ODrive and Control UI is required.
  - It is easily extended to plot other values retrieved by the proxy application. Or computed ones. This is useful when you have other sensors or want to debug control algorithms.
  - Plots are quite scalable: This [repo](https://github.com/helmutbuhler/milana_robot) shows how to extend this application to monitor about 300 variables and it's still very fast and the UI is not overwhelming,
  - Easy to add graphical visualizations of the joint states or video streams and keep it all synchronized.
  - Also should work with ODrive S1 and Pro, but I havn't tried it yet.
  - No JS;)
+
+The video above demonstrates what the UI looks like when it is connected to an ODrive with 2 motors. You don't see the actual motors in the video, but the UI visualizes their state at the top.
 
 
 ## Proxy
