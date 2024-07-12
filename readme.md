@@ -10,6 +10,9 @@ Here is a diagram that shows the connection:
  ![](images/control_ui_diag.png)
 
 ## Control UI
+
+[control_ui_demo.webm](https://github.com/user-attachments/assets/9f039f27-3750-4fe6-92ef-1f7bcb6055b7)
+
 This is a native application that visualizes ODrive data
  - Polls any data and displays it in a graphical user interface
  - Plotting over long time periods
@@ -21,6 +24,7 @@ This is a native application that visualizes ODrive data
  - Easy to add graphical visualizations of the joint states or video streams and keep it all synchronized.
  - Also should work with ODrive S1 and Pro, but I havn't tried it yet.
  - No JS;)
+
 
 ## Proxy
 This is a helper application that directly connects to the ODrive (with the helper library) and basically polls all kinds of values with a frequency of 100Hz. It also opens a server from which it can receive commands.
